@@ -77,8 +77,10 @@ public class MainActivity extends AppCompatActivity {
                         if (dataSnapshot.hasChild(username) && (password.equals(dataSnapshot.child(username).child("password").getValue()))) {
                             Log.i(TAG, "You successfully login");
                             Intent myIntent = new Intent(MainActivity.this, EventActivity.class);
+                            myIntent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
                             myIntent.putExtra("Username", username);
                             startActivity(myIntent);
+                            //MainActivity.this.finish();
                         } else {
                             Toast.makeText(getBaseContext(),"Please login again", Toast.LENGTH_SHORT).show();
                         }

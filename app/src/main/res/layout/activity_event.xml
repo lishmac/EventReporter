@@ -14,7 +14,7 @@
         android:textSize="18sp"
         android:layout_marginBottom="20dp"
         android:layout_alignParentTop="true"
-        android:background="@color/colorPrimary"
+        android:background="@color/primary"
         />
 
     <FrameLayout
